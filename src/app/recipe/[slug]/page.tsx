@@ -2,6 +2,7 @@ import Markdown from "markdown-to-jsx";
 import fs from "fs";
 import matter from "gray-matter";
 import React from "react";
+import path from "path";
 
 interface RecipePageProps {
   params: {
@@ -10,8 +11,8 @@ interface RecipePageProps {
 }
 
 function getPostContent(slug: string) {
-  const folder = "./src/recipes/";
-  const file = folder + `${slug}.md`;
+  const folder = path.join(process.cwd(), "src/recipes");
+  const file = path.join(folder, `${slug}.md`);
   const content = fs.readFileSync(file, "utf8");
 
   const matterResult = matter(content);

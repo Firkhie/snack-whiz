@@ -1,9 +1,10 @@
 import { RecipeMetadata } from "@/components/snack-view";
 import fs from "fs";
 import matter from "gray-matter";
+import path from "path";
 
 export default function getRecipesMetadata() {
-  const folder = "./src/recipes";
+  const folder = path.join(process.cwd(), "src/recipes");
   const files = fs.readdirSync(folder);
   const markdownPosts = files.filter((file) => file.endsWith(".md"));
 

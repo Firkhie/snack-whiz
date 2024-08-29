@@ -3,6 +3,7 @@ import { claudeApi } from "@/lib/claude-api";
 import fs from "fs";
 import { splitRecipeName } from "./split-recipe-name";
 import { TextBlock } from "@anthropic-ai/sdk/resources/messages.mjs";
+import path from "path";
 
 const template = `---
 title: <snack_name>
@@ -41,8 +42,10 @@ ${message}
     const response = await claudeApi({ message: finalMessage });
     const textResponse = (response.content[0] as TextBlock).text;
     const title = splitRecipeName({ text: textResponse });
+    const folder = path.join(process.cwd(), "src/recipes");
+    const file = path.join(folder, `${title}.md`);
     if (title) {
-      fs.writeFile(`./src/recipes/${title}`, textResponse, function (err) {
+      fs.writeFile(file, textResponse, function (err) {
         if (err) {
           throw err;
         }

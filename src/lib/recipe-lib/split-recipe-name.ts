@@ -3,5 +3,5 @@ export function splitRecipeName({ text }: { text: string }) {
   const title = splitLine
     ? splitLine.replace("title: ", "").split(" ").join("_").toLowerCase()
     : null;
-  return `${title}.md`;
+  return title;
 }
