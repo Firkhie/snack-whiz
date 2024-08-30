@@ -1,9 +1,12 @@
+import fs from "fs";
+import path from "path";
+import { Octokit } from "@octokit/rest";
+
+import { TextBlock } from "@anthropic-ai/sdk/resources/messages.mjs";
+
 import { getUsedRecipes } from "@/lib/recipe-lib/get-used-recipes";
 import { claudeApi } from "@/lib/claude-api";
-import fs from "fs";
 import { splitRecipeName } from "./split-recipe-name";
-import { TextBlock } from "@anthropic-ai/sdk/resources/messages.mjs";
-import path from "path";
 
 const template = `---
 title: <snack_name>
@@ -42,14 +45,34 @@ ${message}
     const response = await claudeApi({ message: finalMessage });
     const textResponse = (response.content[0] as TextBlock).text;
     const title = splitRecipeName({ text: textResponse });
+
+    if (!title) throw new Error("No title extracted from recipe");
+
     const folder = path.join(process.cwd(), "src/recipes");
     const file = path.join(folder, `${title}.md`);
-    if (title) {
+
+    if (process.env.NODE_ENV === "development") {
       fs.writeFile(file, textResponse, function (err) {
         if (err) {
           throw err;
         }
       });
+    } else if (process.env.NODE_ENV === "production") {
+      console.log("GO HERE")
+      const client = new Octokit({
+        auth: process.env.GITHUB_TOKEN,
+      });
+      const repoOwner = "Firkhie";
+      const repoName = "snack-whiz";
+
+      await client.repos.createOrUpdateFileContents({
+        owner: repoOwner,
+        repo: repoName,
+        path: `src/recipes/${title}.md`,
+        content: Buffer.from(textResponse).toString("base64"),
+        message: `Add new recipe: ${title}`,
+      });
+      console.log(`Recipe pushed to GitHub: ${title}.md`);
     }
   } catch (error) {
     console.error("Error generating recipe:", error);
