@@ -6,6 +6,7 @@
     <img src="https://img.shields.io/badge/-TypeScript-black?style=for-the-badge&logoColor=white&logo=typescript&color=3178C6" alt="typescript" />
     <img src="https://img.shields.io/badge/-Tailwind_CSS-black?style=for-the-badge&logoColor=white&logo=tailwindcss&color=06B6D4" alt="tailwindcss" />
     <img src="https://img.shields.io/badge/vercel-%23000000.svg?style=for-the-badge&logo=vercel&logoColor=white" alt="vercel" />
+    <img src="https://img.shields.io/badge/github%20actions-%232671E5.svg?style=for-the-badge&logo=githubactions&logoColor=white" alt="githubactions" />
   </div>
 </div>
 
@@ -33,7 +34,7 @@ Welcome to SnackWhiz – Your AI-Powered Snack Recipe Generator! This web app au
 
 👉 Automated Snack Recipe Generation:
 
-- AI-generated snack recipes created weekly using Claude AI.
+- AI-generated snack recipes created weekly using Claude AI and Github Actions as a cron job.
 - Recipes saved as Markdown files, allowing for a static and efficient web experience.
 - Vercel cron job integration for automatic recipe updates without manual intervention.
 
