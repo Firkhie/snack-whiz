@@ -1,6 +1,15 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useEffect, useState } from "react";
+import {
+  addDays,
+  differenceInHours,
+  differenceInMinutes,
+  differenceInSeconds,
+  format,
+  startOfDay,
+} from "date-fns";
+import { toZonedTime } from "date-fns-tz";
 
 export default function CountdownTimer() {
   const [isMounted, setIsMounted] = useState(false);
@@ -23,17 +32,22 @@ export default function CountdownTimer() {
   }
 
   function getTimeLeft() {
-    const now: any = new Date();
-    const nextSunday: any = new Date();
+    const timezone = "Asia/Jakarta";
 
-    nextSunday.setDate(now.getDate() + ((7 - now.getDay()) % 7 || 7));
-    nextSunday.setHours(0, 0, 0, 0);
+    // Get the current time in Jakarta timezone
+    const now = toZonedTime(new Date(), timezone);
 
-    const difference = nextSunday - now;
+    // Calculate the next Sunday at 00:00 AM in Jakarta timezone
+    const nextSunday = startOfDay(addDays(now, (7 - now.getDay()) % 7 || 7));
+    const nextSundayMidnight = toZonedTime(
+      new Date(format(nextSunday, "yyyy-MM-dd") + "T00:00:00"),
+      timezone,
+    );
 
-    const hours = Math.floor((difference / (1000 * 60 * 60)) % 24);
-    const minutes = Math.floor((difference / 1000 / 60) % 60);
-    const seconds = Math.floor((difference / 1000) % 60);
+    // Calculate the time difference
+    const hours = differenceInHours(nextSundayMidnight, now);
+    const minutes = differenceInMinutes(nextSundayMidnight, now) % 60;
+    const seconds = differenceInSeconds(nextSundayMidnight, now) % 60;
 
     return {
       hours: hours < 10 ? `0${hours}` : hours,
@@ -48,6 +62,7 @@ export default function CountdownTimer() {
       <p>
         {timeLeft.hours} : {timeLeft.minutes} : {timeLeft.seconds}
       </p>
+      <p className="text-xs text-gray-500">GMT+7</p>
     </div>
   );
 }
