@@ -27,7 +27,7 @@ difficulty: <Easy | Medium | Hard>
 
 1. **<Instruction_header>** <instruction_description>`;
 
-const message = `Create a unique snack recipe inspired by flavors from around the world, prioritize generating snack that have short name. Use the template above to craft the recipe and ensure it is not a recreation of existing ones.`;
+const message = `Create a unique snack recipe with a short, original name inspired by flavors from around the world. Ensure that the recipe you generate is entirely new and does not duplicate any of the existing recipes listed above. Focus on crafting a distinct recipe that stands apart from those already provided.`;
 
 export async function generateRecipe() {
   try {
@@ -42,7 +42,7 @@ ${usedRecipes}
 MESSAGE:
 ${message}
 `;
-    console.log(finalMessage, "finalMessage");
+    // console.log(finalMessage, "finalMessage");
     const response = await claudeApi({ message: finalMessage });
     const textResponse = (response.content[0] as TextBlock).text;
     const title = splitRecipeName({ text: textResponse });
@@ -59,7 +59,7 @@ ${message}
         }
       });
     } else if (process.env.NODE_ENV === "production") {
-      console.log(title, "TITLE");
+      console.log(title, "GENERATED_TITLE");
       const client = new Octokit({
         auth: process.env.GITHUB_TOKEN,
       });
