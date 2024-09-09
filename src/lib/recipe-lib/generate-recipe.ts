@@ -42,6 +42,7 @@ ${usedRecipes}
 MESSAGE:
 ${message}
 `;
+    console.log(finalMessage, "finalMessage");
     const response = await claudeApi({ message: finalMessage });
     const textResponse = (response.content[0] as TextBlock).text;
     const title = splitRecipeName({ text: textResponse });
@@ -58,7 +59,7 @@ ${message}
         }
       });
     } else if (process.env.NODE_ENV === "production") {
-      console.log("GO HERE")
+      console.log(title, "TITLE");
       const client = new Octokit({
         auth: process.env.GITHUB_TOKEN,
       });
