@@ -27,7 +27,7 @@ difficulty: <Easy | Medium | Hard>
 
 1. **<Instruction_header>** <instruction_description>`;
 
-const message = `Create a unique snack recipe with a short, original name inspired by flavors from around the world. Ensure that the recipe you generate is entirely new and does not duplicate any of the existing recipes listed above. Focus on crafting a distinct recipe that stands apart from those already provided.`;
+const message = `Create a unique snack recipe with a short, original name inspired by global flavors. Make sure the recipe is entirely new and different from the EXISTING RECIPES above. Focus on making it distinct.`;
 
 export async function generateRecipe() {
   try {
