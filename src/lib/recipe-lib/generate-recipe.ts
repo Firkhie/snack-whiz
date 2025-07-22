@@ -25,9 +25,26 @@ difficulty: <Easy | Medium | Hard>
 
 ## Instructions
 
-1. **<Instruction_header>** <instruction_description>`;
+1. **<Instruction_header>** <instruction_description>
+`;
 
-const message = `Create a unique snack recipe with a short, original name inspired by global flavors. Make sure the recipe is entirely new and different from the EXISTING RECIPES above. Focus on making it distinct.`;
+const regions = [
+  "African",
+  "South American",
+  "European",
+  "Southeast Asian",
+  "Middle Eastern",
+  "Oceanian",
+  "Caribbean",
+  "North American",
+];
+const randomRegion = regions[Math.floor(Math.random() * regions.length)];
+
+const message = `Create a unique snack recipe that does NOT exist in the EXISTING RECIPES list.
+Follow the exact structure and format of the TEMPLATE above.
+Base the recipe on flavors or ingredients typical of the ${randomRegion} region.
+Do not repeat any recipe names from the existing list.
+`;
 
 export async function generateRecipe() {
   try {
@@ -35,10 +52,8 @@ export async function generateRecipe() {
     const finalMessage = `
 TEMPLATE:
 ${template}
-
 EXISTING RECIPES:
 ${usedRecipes}
-
 MESSAGE:
 ${message}
 `;
