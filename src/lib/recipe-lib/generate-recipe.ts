@@ -59,7 +59,14 @@ ${message}
 `;
     // console.log(finalMessage, "finalMessage");
     const response = await claudeApi({ message: finalMessage });
-    const textResponse = (response.content[0] as TextBlock).text;
+    const textResponseRaw = (response.content[0] as TextBlock).text;
+
+    // Remove any Markdown code block fences
+    const textResponse = textResponseRaw
+      .replace(/```markdown\s*/gi, "") // remove ```markdown
+      .replace(/```/g, "") // remove closing ```
+      .trim();
+
     const title = splitRecipeName({ text: textResponse });
 
     if (!title) throw new Error("No title extracted from recipe");

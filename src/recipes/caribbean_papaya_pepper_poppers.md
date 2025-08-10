@@ -1,4 +1,3 @@
-```markdown
 ---
 title: Caribbean Papaya Pepper Poppers
 description: Crispy, golden-brown fritters bursting with sweet papaya and spicy scotch bonnet peppers, showcasing the vibrant flavors of Caribbean cuisine
@@ -44,4 +43,3 @@ difficulty: Medium
 6. **Prepare Dipping Sauce** Whisk sour cream, lime juice, and cilantro together in a small bowl.
 
 7. **Serve** Drain poppers on paper towels and serve hot with cilantro-lime dipping sauce.
-```

@@ -1,4 +1,3 @@
-```markdown
 ---
 title: New England Maple Cranberry Crisps
 description: A sweet and tangy snack featuring classic New England flavors of maple and cranberry, baked into crispy, light wafers
@@ -33,4 +32,3 @@ difficulty: Medium
 3. **Bake Crisps** Bake at 375°F for 12-15 minutes until edges are golden brown and crisp.
 
 4. **Glaze and Finish** Whisk maple glaze ingredients and lightly brush over warm crisps. Let cool completely to allow glaze to set.
-```

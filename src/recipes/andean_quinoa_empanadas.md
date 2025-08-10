@@ -1,4 +1,3 @@
-```markdown
 ---
 title: Andean Quinoa Empanadas
 description: Crispy golden pastry pockets filled with spiced quinoa, roasted peppers, and local Andean cheese
@@ -37,4 +36,3 @@ difficulty: Medium
 4. **Bake** Brush with egg wash and bake at 375°F for 25 minutes until golden brown.
 
 5. **Serve** Let cool slightly and serve warm with green salsa.
-```

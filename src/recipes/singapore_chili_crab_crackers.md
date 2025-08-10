@@ -1,4 +1,3 @@
-```markdown
 ---
 title: Singapore Chili Crab Crackers
 description: Crispy seafood-infused crackers with a tangy and spicy Southeast Asian twist
@@ -37,4 +36,3 @@ difficulty: Medium
 5. **Prepare Sauce** Whisk together all dipping sauce ingredients until well combined.
 
 6. **Serve** Drain crackers on paper towels and serve hot with the spicy dipping sauce.
-```

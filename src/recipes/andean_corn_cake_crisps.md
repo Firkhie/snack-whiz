@@ -1,4 +1,3 @@
-```markdown
 ---
 title: Andean Corn Cake Crisps
 description: Crispy golden corn cakes infused with native Peruvian herbs and spices, served with a zesty aji amarillo dipping sauce
@@ -38,4 +37,3 @@ difficulty: Medium
 4. **Make Dipping Sauce** Blend aji amarillo peppers, sour cream, lime juice, garlic, and salt until smooth.
 
 5. **Serve** Drain crisps on paper towels and serve warm with aji amarillo sauce for dipping.
-```

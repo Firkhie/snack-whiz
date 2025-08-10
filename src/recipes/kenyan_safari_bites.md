@@ -1,4 +1,3 @@
-```markdown
 ---
 title: Kenyan Safari Bites
 description: Crispy, savory bites inspired by the bold spices and flavors of East African cuisine
@@ -38,4 +37,3 @@ difficulty: Medium
 5. **Bake** Preheat oven to 375°F. Place bites on a lined baking sheet and bake for 20-25 minutes until golden and crisp.
 
 6. **Serve** Allow to cool for 5 minutes. Serve warm with a side of tangy mango chutney or yogurt dip.
-```

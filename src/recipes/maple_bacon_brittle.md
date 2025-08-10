@@ -1,4 +1,3 @@
-```markdown
 ---
 title: Maple Bacon Brittle
 description: A sweet and savory North American-inspired crispy snack blending rich maple syrup with smoky bacon
@@ -32,4 +31,3 @@ difficulty: Medium
 4. **Add Extras** Quickly stir in bacon bits, pecans, and black pepper. Immediately pour onto a silicone mat or buttered baking sheet.
 
 5. **Cool and Break** Allow brittle to cool completely, then break into irregular pieces. Store in an airtight container.
-```

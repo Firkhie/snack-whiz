@@ -1,4 +1,3 @@
-```markdown
 ---
 title: Caribbean Coconut Calypso Crisps
 description: Crispy, golden coconut chips infused with tropical rum and lime zest, perfect for a vibrant Caribbean-inspired snack
@@ -35,4 +34,3 @@ difficulty: Easy
 5. **Bake and Crisp** Bake at 325°F for 15-20 minutes, turning once halfway through, until edges are golden and crisp.
 
 6. **Cool and Serve** Allow chips to cool completely, which will further crisp them. Store in an airtight container.
-```

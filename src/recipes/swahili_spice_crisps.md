@@ -1,4 +1,3 @@
-```markdown
 ---
 title: Swahili Spice Crisps
 description: Crispy, thin flatbreads infused with traditional East African spices and herbs
@@ -35,4 +34,3 @@ difficulty: Medium
 4. **Roll and Cut** Divide dough into small portions, rolling each into thin, translucent rounds.
 
 5. **Season and Bake** Sprinkle with dried dhania, sesame seeds, and black pepper. Bake at 375°F on a parchment-lined baking sheet for 12-15 minutes until crisp and golden.
-```

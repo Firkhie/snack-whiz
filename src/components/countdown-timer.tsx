@@ -38,7 +38,12 @@ export default function CountdownTimer() {
     const now = toZonedTime(new Date(), timezone);
 
     // Calculate the next Sunday at 00:00 AM in Jakarta timezone
-    const nextSunday = startOfDay(addDays(now, (7 - now.getDay()) % 7 || 7));
+    let daysUntilSunday = (7 - now.getDay()) % 7;
+    if (daysUntilSunday === 0) {
+      // If it's already past Sunday 00:00, shift to next Sunday
+      daysUntilSunday = 7;
+    }
+    const nextSunday = startOfDay(addDays(now, daysUntilSunday));
     const nextSundayMidnight = toZonedTime(
       new Date(format(nextSunday, "yyyy-MM-dd") + "T00:00:00"),
       timezone,

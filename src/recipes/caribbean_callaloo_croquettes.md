@@ -1,4 +1,3 @@
-```markdown
 ---
 title: Caribbean Callaloo Croquettes
 description: Crispy golden croquettes featuring traditional Caribbean callaloo greens, blended with aromatic spices and a hint of scotch bonnet pepper
@@ -38,4 +37,3 @@ difficulty: Medium
 5. **Fry Croquettes** Deep fry in hot oil at 350°F until golden brown and crispy, approximately 3-4 minutes.
 
 6. **Drain and Serve** Remove croquettes, drain on paper towels, and serve hot with a spicy mango dipping sauce.
-```

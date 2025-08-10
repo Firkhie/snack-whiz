@@ -1,4 +1,3 @@
-```markdown
 ---
 title: Caribbean Coconut Jerk Bites
 description: Spicy and sweet coconut-crusted chicken bites with a traditional Jamaican jerk seasoning
@@ -36,4 +35,3 @@ difficulty: Medium
 5. **Prepare Sauce** While baking, mix mango chutney, lime juice, and cilantro in a small bowl.
 
 6. **Serve** Remove bites from oven, let cool for 5 minutes. Serve hot with mango-cilantro dipping sauce.
-```

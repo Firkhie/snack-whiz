@@ -1,4 +1,3 @@
-```markdown
 ---
 title: Caribbean Plantain Pepper Poppers
 description: Crispy fried plantain bites stuffed with spicy scotch bonnet and creamy cheese, showcasing bold Caribbean flavors
@@ -38,4 +37,3 @@ difficulty: Medium
 5. **Fry Poppers** Heat oil to 350°F and fry poppers in batches until golden brown and crispy, about 2-3 minutes per side.
 
 6. **Drain and Serve** Remove poppers with a slotted spoon and drain on paper towels. Serve hot with a cooling mango or lime dipping sauce.
-```
